@@ -4,53 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SylphyPortfolio</title>
+  <meta name="description" content="C#とTypeScriptの作品・記事をまとめたポートフォリオサイト。">
 </head>
 <body>
   <header>
-  <h1 class="logo">SylphyPortfolio</h1>
-  <nav>
-    <ul>
-      <li><a href="#works">作品</a></li>
-      <li><a href="#posts">記事</a></li>
-      <li><a href="#contact">連絡先</a></li>
-    </ul>
-  </nav>
-</header>
-  
-  <div class="wrap">
+    <h1 class="logo">SylphyPortfolio</h1>
+    <nav aria-label="主ナビゲーション">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#posts">Articles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap" id="home">
     <section class="hero">
-		<h1>作品紹介サイトへようこそ！</h1>
-		<p>このサイトでは作った作品や記事をわかりやすくまとめています。</p>
+      <h2>作品紹介サイトへようこそ！</h2>
+      <p>このサイトでは作った作品や記事をわかりやすくまとめています。</p>
     </section>
-    
-    <section class="works">
+
+    <section class="works" id="portfolio">
+      <h2>ポートフォリオ</h2>
       <div class="grid">
         <article class="card">
-			<div class="GrowLog">
-				
-			</div>
-			<div class=""></div>
+          <h3>Grow Log</h3>
+          <div class="GrowLog"></div>
         </article>
-		<article class="card">
-			<div class="FunctionCalculator">
-				
-			</div>
-		</article>
-		<article class="card">
-			<div class="Grow10"></div>
-		</article>
+        <article class="card">
+          <h3>Scientific Calculator</h3>
+          <div class="FunctionCalculator"></div>
+        </article>
+        <article class="card">
+          <h3>Grow10</h3>
+          <div class="Grow10"></div>
+        </article>
       </div>
     </section>
-    
+
     <section id="posts">
+      <h2>記事一覧</h2>
       <div class="list">
-        <a class="row"></a>
+        <article class="post">
+          <h3><a href="kiji1.html">SQLiteの使い方</a></h3>
+          <p>SQLiteの使い方をわかりやすく紹介</p>
+        </article>
+        <article class="post">
+          <h3><a href="kiji2.html">XAMLの基礎</a></h3>
+          <p>XAMLについてわかりやすく解説</p>
+        </article>
+        <article class="post">
+          <h3><a href="kiji3.html">アルゴリズムの解説</a></h3>
+          <p>最も基礎的なバブルソートを解説</p>
+        </article>
       </div>
     </section>
-    
-    <section id="contact"></section>
-    
-    <footer></footer>
-  </div>
+
+    <section id="contact">
+      <h2>自己紹介</h2>
+      <p>私の名前はxxxxです。</p>
+      <h3>連絡はこちらから</h3>
+      <address>
+        <ul>
+          <li><a href="mailto:xxx@gmail.com">xxx@gmail.com</a></li>
+          <li><a href="https://instagram.com/yourid" target="_blank" rel="noopener">Instagram</a> / 
+              <a href="https://x.com/yourid" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <nav aria-label="フッターナビ">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#posts">Articles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <span id="year">2025</span> Eran. All rights reserved.</p>
+  </foote>
 </body>
 </html>
