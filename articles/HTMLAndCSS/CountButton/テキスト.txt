@@ -1,0 +1,30 @@
+カウントタイマーの勉強をまとめる
+
+
+⚪︎フォルダの構成は？
+・count-app
+	・index.html ページの構造
+	・style.cs デザイン・見た目
+	・script.js 動作、ロジック
+
+
+⚪︎<span id="count">0</span>
+・インライン要素　→ 文の途中にちょっとした要素を入れるための箱
+・<p>こんにちは、<span>エレン</span>さん！</p>
+	→こうすると「エレン」だけをCSSやJavaScriptで操作できる。
+・今回は「カウントの数値（1、2、3…）」を表示する場所
+・JavaScriptから取得するためにid="count"
+	const countElem = document.getElementById("count");
+	countElem.textContent = count;
+・結論、countと言うなの<span>に、JavaScriptで数字を入れて表示する。
+
+
+⚪︎どうして最後にjsを読み込むのか
+・<script src="script.js"></script>
+・HTMLを全部読み込んでからJavaScriptを実行するため。
+・最近は遅延読込ができるため、headに書いてもいい。
+
+
+⚪︎ Webフォント
+https://fonts.google.com/
+↑おすすめ
