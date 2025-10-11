@@ -1,23 +1,17 @@
 const textElem = document.getElementById("text");
 const buttonElem = document.getElementById("textchange");
 
-const changeElem = {
-	1: "ボタンを押して見て",
-	2: "ボタンが押された！"
-	3: "バイバイ!"
-};
+const changeElem = [
+	 "ボタンを押して見て"
+	 ,"ボタンが押された！"
+	 ,"バイバイ!"
+];
 
-let current = changeElem.1;
+let current = 0;
 
 function change() {
-	current === changeElem.1
-	? changeElem.2
-	:current === changeElem.2
-	? change.Elem.3
-	: current.3
+	current = (current + 1) % changeElem.length;
+	textElem.textContent = changeElem[current];
 }
 
-buttonElem.addEventListener("click", () =>
-	
-
-
+buttonElem.addEventListener("click", change);
