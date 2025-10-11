@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="UTF-8">
+	<title>ジャンケンゲーム</title>
+	<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+	<h1>じゃんけんゲーム</h1>
+	<h2 id="resultText">1回戦目</h2>
+	<p>連続で何回勝てるかな？<br />負けたら最初から！</p>
+	
+	<fieldset>
+	<h3>ジャンケン</h3>
+	<p>3つの中から選んでね！</p>
+	<div>
+		<input type="radio" id="gu" name="jyanken" value="gu" />
+		<label for="gu">グー</label>
+	</div>
+	<div>
+		<input type="radio" id="choki" name="jyanken" value="choki" />
+		<label for="choki">チョキ</label>
+	</div>
+	<div>
+		<input type="radio" id="pa" name="jyanken" value="pa" />
+		<label for="pa">パー</label>
+	</div>
+	<button id="submit">勝負！</button>
+	</fieldset>
+	
+	<h3>結果</h3>
+	<p id="result">まだ勝負していません</p>
+	<p id="streak">連勝 :0</p>
+	<script src="script.js"></script>
+	</body>
+</html>
