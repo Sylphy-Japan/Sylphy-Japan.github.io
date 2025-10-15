@@ -1,0 +1,65 @@
+<body>
+<section id="exchange">
+  <h2>取引所</h2>
+
+  <article id="exchange-role">
+    <h3>取引所の役割</h3>
+    <p>
+      取引所は、株・為替・仮想通貨などの「売りたい人」と「買いたい人」を自動的にマッチングさせる仕組みを提供する。
+      公正な価格形成、流動性の確保、取引の透明性維持などが主な役割。
+      将来的にAIボットがこの構造をどのように利用できるかを探っていく。
+    </p>
+  </article>
+
+  <article id="exchange-major">
+    <h3>主要な取引所</h3>
+    <ul>
+      <li>🇺🇸 <strong>NYSE / NASDAQ</strong> – 世界最大の株式市場。流動性と情報量が圧倒的。</li>
+      <li>🇯🇵 <strong>東京証券取引所（TSE）</strong> – 日本の中心取引所。APIは制限が多い。</li>
+      <li>🇪🇺 <strong>Euronext / Xetra</strong> – 欧州各国の主要市場。ETF取引が活発。</li>
+      <li>₿ <strong>Binance / Bybit</strong> – 仮想通貨市場。APIが豊富でボット構築に最適。</li>
+      <li>💱 <strong>OANDA / FXCM</strong> – 為替取引プラットフォーム。C#やPython対応APIあり。</li>
+    </ul>
+  </article>
+
+  <article id="exchange-analysis">
+    <h3>どの様に分析するのか</h3>
+    <p>
+      各取引所から取得できるデータ（価格、出来高、板情報、ボラティリティ、ニュース）を統合し、
+      市場ごとの「健康度（MarketHealthScore）」を算出する。
+      このスコアを基に、ボットがどの市場に資金を振り分けるか判断する。
+    </p>
+  </article>
+
+  <article id="exchange-api">
+    <h3>取引所の情報を受け取れるAPI</h3>
+    <ul>
+      <li><strong>Alpha Vantage</strong> – 無料で株価や為替データを取得できるが、売買は不可。</li>
+      <li><strong>Alpaca</strong> – 米国株の自動売買が可能。Paper Trading対応。</li>
+      <li><strong>Binance API</strong> – 仮想通貨の取引・価格取得。Bot向けに最適。</li>
+      <li><strong>OANDA API</strong> – 為替取引用API。C#から利用しやすい。</li>
+      <li><strong>Interactive Brokers (IBKR)</strong> – 世界中の株・ETF・FXに対応する強力API。</li>
+    </ul>
+  </article>
+
+  <article id="exchange-master">
+    <h3>取引所のテーブルマスタ</h3>
+    <pre><code>
+ExchangeId | Name              | Country | MarketType | TradeSupported | PaperTrading
+----------------------------------------------------------------------------------------
+ALPACA     | Alpaca            | US       | Stock       | true            | true
+BINANCE    | Binance           | SG       | Crypto      | true            | true
+OANDA      | OANDA             | US       | Forex       | true            | true
+IBKR       | InteractiveBrokers| US       | Stock/FX    | true            | true
+ALPHAV     | Alpha Vantage     | US       | Data        | false           | false
+    </code></pre>
+    <p>
+      上記は実際のデータベースマスタの例。<br>
+      取引可能（TradeSupported=true）なものだけをボットが使用し、
+      データ提供のみのAPIは分析専用として扱う。
+    </p>
+  </article>
+
+</section>
+
+</body>
